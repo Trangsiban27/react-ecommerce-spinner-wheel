@@ -1,7 +1,7 @@
 import type { PrizeWheelRef, Sector } from '@mertercelik/react-prize-wheel';
 import { useRef, useState } from 'react'
 import { PrizeWheel } from '@mertercelik/react-prize-wheel';
-import { Button } from '@mui/material';
+import { Button, Typography } from '@mui/material';
 import { useConfetti } from '../../../hooks/useConfetti';
 import CelerationDialog from '../dialogs/CelerationDialog';
 import { useGlobalState } from '../../../store/useGlobalState';
@@ -42,6 +42,8 @@ const Wheel = () => {
 
     return (
         <div className='flex flex-col gap-y-6 items-center justify-center py-8'>
+            <Typography variant='h4' fontWeight={600}>Lucky Wheel</Typography>
+
             <div className='md:w-100 w-[98%]'>
                 <PrizeWheel
                     ref={wheelRef}
