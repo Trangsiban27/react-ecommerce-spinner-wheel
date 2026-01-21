@@ -55,7 +55,7 @@ const Header = () => {
                 ))}
             </nav>}
 
-            {<div className='flex items-center gap-x-2'>
+            {<div className='flex items-center gap-x-2 pr-2'>
                 <IconButton>
                     <FavoriteBorderIcon />
                 </IconButton>
