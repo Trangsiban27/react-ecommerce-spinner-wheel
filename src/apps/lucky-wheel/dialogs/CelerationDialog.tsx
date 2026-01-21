@@ -13,6 +13,7 @@ const CelerationDialog = ({ open, setOpen, result }: Props) => {
     const { openSnackbar } = useGlobalState()
 
     const handleClose = () => {
+        openSnackbar('Voucher saved successfully, you can use it later!', 'success');
         setOpen(false);
     }
 
