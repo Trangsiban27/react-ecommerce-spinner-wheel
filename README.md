@@ -6,7 +6,7 @@ Users can spin the wheel to win a discount coupon and apply it to their cart.
 ---
 
 ## 🚀 Live Demo
-👉 [https://react-pinning-wheel.vercel.app](https://react-ecommerce-spinner-wheel.vercel.app/lucky-wheel)
+👉 [https://react-pinning-wheel.vercel.app](https://react-ecommerce-spinner-wheel.vercel.app/)
 ---
 
 ## 🛠️ Tech Stack
