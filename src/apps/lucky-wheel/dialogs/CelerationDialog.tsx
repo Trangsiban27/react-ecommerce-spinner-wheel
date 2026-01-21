@@ -1,6 +1,7 @@
 import type { Sector } from '@mertercelik/react-prize-wheel'
 import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, IconButton, Typography } from '@mui/material'
 import CloseIcon from '@mui/icons-material/Close';
+import { useGlobalState } from '../../../store/useGlobalState';
 
 interface Props {
     open: boolean,
@@ -9,9 +10,14 @@ interface Props {
 }
 
 const CelerationDialog = ({ open, setOpen, result }: Props) => {
-    console.log('result: ', result)
+    const { openSnackbar } = useGlobalState()
 
     const handleClose = () => {
+        setOpen(false);
+    }
+
+    const handleSaveVoucher = () => {
+        openSnackbar('Voucher saved successfully, you can use it later!', 'success');
         setOpen(false);
     }
 
@@ -56,7 +62,7 @@ const CelerationDialog = ({ open, setOpen, result }: Props) => {
                 className='border-t border-gray-300'
             >
                 {result?.probability !== 0 && <Button
-                    onClick={handleClose}
+                    onClick={handleSaveVoucher}
                     variant="outlined"
                     sx={{
                         textTransform: 'none'
