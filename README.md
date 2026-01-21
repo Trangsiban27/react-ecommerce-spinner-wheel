@@ -44,3 +44,4 @@ Users can spin the wheel to win a discount coupon and apply it to their cart.
 3. Wheel stops at a random segment
 4. A modal shows the prize (e.g. *"You won 15% off!"*)
 5. Coupon can be applied to the cart (simulated)
+
