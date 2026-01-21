@@ -1,5 +1,5 @@
 import type { PrizeWheelRef, Sector } from '@mertercelik/react-prize-wheel';
-import React, { useRef, useState } from 'react'
+import { useRef, useState } from 'react'
 import { PrizeWheel } from '@mertercelik/react-prize-wheel';
 import { Button } from '@mui/material';
 import { useConfetti } from '../../../hooks/useConfetti';
