@@ -17,6 +17,8 @@ interface GlobalState {
     // Actions (Hàm cập nhật state)
     openSnackbar: (message: string, variant: "success" | "error" | "info" | "warning") => void;
     closeSnackbar: () => void;
+    histories: Prize[];
+    addHistory: (prize: any) => void;
 }
 
 export const useGlobalState = create<GlobalState> ((set) => ({
@@ -40,5 +42,16 @@ export const useGlobalState = create<GlobalState> ((set) => ({
             ...state.snackbar,
             open: false
         }
-    }))
+    })),
+
+    histories: JSON.parse(localStorage.getItem('rewardHistories') ?? '[]'),
+
+    addHistory: (prize: any) => set((state: any) => {
+        const newHistory = { ...prize, wonAt: new Date().toISOString() };
+        const updatedHistory = [newHistory, ...state.histories].slice(0, 10);
+
+        localStorage.setItem('rewardHistories', JSON.stringify(updatedHistory));
+
+        return { histories: updatedHistory };
+    }),
 }))

@@ -4,6 +4,7 @@ import { PrizeWheel } from '@mertercelik/react-prize-wheel';
 import { Button } from '@mui/material';
 import { useConfetti } from '../../../hooks/useConfetti';
 import CelerationDialog from '../dialogs/CelerationDialog';
+import { useGlobalState } from '../../../store/useGlobalState';
 
 const Wheel = () => {
     //state
@@ -12,6 +13,7 @@ const Wheel = () => {
 
     const wheelRef = useRef<PrizeWheelRef | null>(null);
     const { fireCelebration } = useConfetti();
+    const { addHistory } = useGlobalState();
 
     const sectors: Sector[] = [
         { id: 1, label: 'Better luck next time!', probability: 0 },
@@ -30,6 +32,8 @@ const Wheel = () => {
         handleOpenDialog();
         fireCelebration(1);
         setResult(sector);
+
+        addHistory(sector)
     };
 
     const handleOpenDialog = () => {
@@ -38,7 +42,7 @@ const Wheel = () => {
 
     return (
         <div className='flex flex-col gap-y-6 items-center justify-center py-8'>
-            <div className='w-100'>
+            <div className='md:w-100 w-[98%]'>
                 <PrizeWheel
                     ref={wheelRef}
                     sectors={sectors}
