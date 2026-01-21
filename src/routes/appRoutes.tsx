@@ -4,6 +4,7 @@ import Home from "../apps/home/Home";
 import LuckyWheel from "../apps/lucky-wheel/LuckyWheel";
 import About from "../apps/about/About";
 import Contact from "../apps/contact/Contact";
+import Cart from "../apps/cart/Cart";
 
 const routes: RouteObject[] = [
     {
@@ -29,6 +30,10 @@ const routes: RouteObject[] = [
             {
                 path: 'contact',
                 element: <Contact />
+            },
+            {
+                path: 'cart',
+                element: <Cart />
             }
         ]
     },
