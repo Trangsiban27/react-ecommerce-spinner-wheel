@@ -12,8 +12,11 @@ interface Props {
 const CelerationDialog = ({ open, setOpen, result }: Props) => {
     const { openSnackbar } = useGlobalState()
 
-    const handleClose = () => {
-        openSnackbar('Voucher saved successfully, you can use it later!', 'success');
+    const handleClickCloseDialog = () => {
+        if (result?.probability !== 0) {
+            openSnackbar('Voucher saved successfully, you can use it later!', 'success');
+        }
+
         setOpen(false);
     }
 
@@ -22,10 +25,14 @@ const CelerationDialog = ({ open, setOpen, result }: Props) => {
         setOpen(false);
     }
 
+    const handleGetVoucher = () => {
+        setOpen(false)
+    }
+
     return (
         <Dialog
             open={open}
-            onClose={handleClose}
+            onClose={handleClickCloseDialog}
             aria-labelledby="alert-dialog-title"
             aria-describedby="alert-dialog-description"
             fullWidth={true}
@@ -38,7 +45,7 @@ const CelerationDialog = ({ open, setOpen, result }: Props) => {
                 <Typography fontWeight={600}>Congratulations!</Typography>
 
                 <IconButton
-                    onClick={handleClose}
+                    onClick={handleClickCloseDialog}
                 >
                     <CloseIcon
                         sx={{
@@ -75,18 +82,19 @@ const CelerationDialog = ({ open, setOpen, result }: Props) => {
                 {result?.probability !== 0 ?
                     (
                         <Button
-                            onClick={handleClose}
+                            onClick={handleGetVoucher}
                             variant="contained"
                             color="success"
                             sx={{
                                 textTransform: 'none'
                             }}
+
                         >
                             Great, get it now!
                         </Button>
                     ) : (
                         <Button
-                            onClick={handleClose}
+                            onClick={handleClickCloseDialog}
                             variant="contained"
                             color="success"
                             sx={{

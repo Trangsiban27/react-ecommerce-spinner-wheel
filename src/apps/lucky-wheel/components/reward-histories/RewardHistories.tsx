@@ -20,9 +20,9 @@ const RewardHistories = () => {
 
             <ul className='flex-1 overflow-y-auto overflow-x-auto'>
                 {histories?.length > 0 ? (
-                    histories?.map((history: any) => (
+                    histories?.slice(0, 9)?.map((history: any, index: number) => (
                         <li
-                            key={history?.id}
+                            key={index}
                             className='border-b last:border-b-0 border-gray-200 p-2 hover:bg-gray-50'
                         >
                             <Typography variant='body2' fontWeight={500} className='text-gray-700'>

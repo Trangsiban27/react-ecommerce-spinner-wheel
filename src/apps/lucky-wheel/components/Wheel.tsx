@@ -18,8 +18,10 @@ const Wheel = () => {
     const sectors: Sector[] = [
         { id: 1, label: 'Better luck next time!', probability: 0 },
         { id: 2, label: 'Discount 15%', probability: 15 },
-        { id: 3, label: 'Better luck next time!', probability: 0 },
-        { id: 4, label: 'Discount 15%', probability: 15 },
+        { id: 3, label: 'Discount 25%', probability: 25 },
+        { id: 4, label: 'Better luck next time!', probability: 0 },
+        { id: 5, label: 'Discount 15%', probability: 15 },
+        { id: 6, label: 'Discount 25%', probability: 25 },
     ];
 
     const handleSpinClick = () => {
@@ -42,7 +44,7 @@ const Wheel = () => {
 
     return (
         <div className='flex flex-col gap-y-6 items-center justify-center py-8'>
-            <Typography variant='h4' fontWeight={600}>Lucky Wheel</Typography>
+            <Typography variant='h6' fontWeight={600}>Lucky Wheel</Typography>
 
             <div className='md:w-100 w-[98%]'>
                 <PrizeWheel
