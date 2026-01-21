@@ -27,6 +27,7 @@ Users can spin the wheel to win a discount coupon and apply it to their cart.
 
 **Lucky Wheel Page:**
 - Interactive lucky spinning wheel
+- Reward history list
 - Smooth and realistic spinning animation
 - Random prize selection logic
 - Prize result displayed in a modal
