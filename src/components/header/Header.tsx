@@ -1,4 +1,4 @@
-import { Box, Drawer, IconButton, List, ListItem, ListItemText, Typography, useMediaQuery, useTheme } from '@mui/material'
+import { Badge, Box, Drawer, IconButton, List, ListItem, ListItemText, Typography, useMediaQuery, useTheme } from '@mui/material'
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import { useState } from 'react';
@@ -61,7 +61,19 @@ const Header = () => {
                 </IconButton>
 
                 <IconButton>
-                    <ShoppingCartOutlinedIcon />
+                    <Badge
+                        badgeContent={2}
+                        color="error"
+                        sx={{
+                            '& .MuiBadge-badge': {
+                                fontSize: '0.65rem',
+                                height: '18px',
+                                minWidth: '18px',
+                            },
+                        }}
+                    >
+                        <ShoppingCartOutlinedIcon />
+                    </Badge>
                 </IconButton>
             </div>}
 
