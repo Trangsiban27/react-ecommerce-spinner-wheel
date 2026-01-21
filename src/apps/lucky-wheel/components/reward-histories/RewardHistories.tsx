@@ -1,6 +1,4 @@
-import type { Sector } from '@mertercelik/react-prize-wheel';
 import { Paper, Typography } from '@mui/material'
-import React, { useEffect, useState } from 'react'
 import { formatDateTime } from '../../../../utils/formatDateTime';
 import { useGlobalState } from '../../../../store/useGlobalState';
 
@@ -22,7 +20,7 @@ const RewardHistories = () => {
 
             <ul className='flex-1 overflow-y-auto overflow-x-auto'>
                 {histories?.length > 0 ? (
-                    histories?.map((history: any, index: number) => (
+                    histories?.map((history: any) => (
                         <li
                             key={history?.id}
                             className='border-b last:border-b-0 border-gray-200 p-2 hover:bg-gray-50'

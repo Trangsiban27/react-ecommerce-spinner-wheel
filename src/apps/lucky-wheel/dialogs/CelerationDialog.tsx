@@ -1,5 +1,5 @@
 import type { Sector } from '@mertercelik/react-prize-wheel'
-import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, IconButton, Typography } from '@mui/material'
+import { Button, Dialog, DialogActions, DialogContent, DialogTitle, IconButton, Typography } from '@mui/material'
 import CloseIcon from '@mui/icons-material/Close';
 import { useGlobalState } from '../../../store/useGlobalState';
 

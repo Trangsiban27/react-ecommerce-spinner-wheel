@@ -1,5 +1,4 @@
 import { Alert, Slide, Snackbar, type SlideProps } from '@mui/material'
-import React from 'react'
 import { useGlobalState } from '../../store/useGlobalState'
 
 function SlideTransition(props: SlideProps) {
