@@ -2,6 +2,7 @@ import { Outlet } from 'react-router-dom'
 import Header from '../components/header/Header'
 import SaleBlock from '../components/sale-block/SaleBlock'
 import SnackbarMessage from '../components/snackbar/SnackbarMessage'
+import Footer from '../components/footer/Footer'
 
 const Layout = () => {
     return (
@@ -13,9 +14,7 @@ const Layout = () => {
                 <Outlet />
             </main>
 
-            {/* <footer>
-                <p>© 2023 My App</p>
-            </footer> */}
+            <Footer />
 
             <SnackbarMessage />
         </div>
