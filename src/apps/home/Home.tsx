@@ -15,7 +15,7 @@ const Home = () => {
                 <Skeleton variant="rectangular" width={'100%'} height={320} />
             </div>
 
-            <div className="w-full flex items-center justify-center gap-x-6 p-6">
+            <div className="w-full flex flex-wrap items-center md:justify-center justify-start gap-6 p-6">
                 {Array.from(Array(8)).map((_, index) => (
                     <Skeleton key={index} variant="circular" width={40} height={40} />
                 ))}
