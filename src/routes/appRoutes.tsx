@@ -3,6 +3,7 @@ import Layout from "../layout/Layout";
 import Home from "../apps/home/Home";
 import LuckyWheel from "../apps/lucky-wheel/LuckyWheel";
 import About from "../apps/about/About";
+import Contact from "../apps/contact/Contact";
 
 const routes: RouteObject[] = [
     {
@@ -24,6 +25,10 @@ const routes: RouteObject[] = [
             {
                 path: 'about',
                 element: <About />
+            },
+            {
+                path: 'contact',
+                element: <Contact />
             }
         ]
     },
